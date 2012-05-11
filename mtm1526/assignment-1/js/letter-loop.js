@@ -14,7 +14,7 @@ if(letter) {
 		
 		for(var a=0; a<i; a++){
 			document.write(letter );
-			//I did it!!! 
+			//I did it!!! but smartgit is giving problems T-T
 		}
 		document.write(letter + '<br>');
 		
