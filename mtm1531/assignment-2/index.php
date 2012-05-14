@@ -43,7 +43,9 @@
 							$sumtax = (13/100) * $sum;
 							
 							$totalsum = $sum + $sumtax;
-						echo $totalsum ?></h1>
+							
+							$output_number = number_format($totalsum, 2, '.', ''); 
+							echo('$'.$output_number);?></h1>
 						 
 						
 					
@@ -60,7 +62,9 @@
 							$sumtax = (13/100) * $subtraction;
 							
 							$totalsum = $subtraction + $sumtax;
-						echo $totalsum ?></h1>
+						
+							$output_number = number_format($totalsum, 2, '.', ''); 
+							echo('$'.$output_number);?></h1>
 					<?php
 					break;
 					
@@ -76,8 +80,9 @@
 							$sumtax = (13/100) * $division;
 							
 							$totalsum = $division + $sumtax;
-						echo $totalsum ?></h1>
-					
+						
+							$output_number = number_format($totalsum, 2, '.', ''); 
+							echo('$'.$output_number);?></h1>
 					<?php
 					break;
 					
@@ -93,8 +98,9 @@
 							$sumtax = (13/100) * $multiply;
 							
 							$totalsum = $multiply + $sumtax;
-						echo $totalsum ?></h1>
 						
+							$output_number = number_format($totalsum, 2, '.', ''); 
+							echo('$'.$output_number);?></h1>
 					
 					<?php
 					
