@@ -15,6 +15,7 @@ $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 $confirm_password = filter_input(INPUT_POST, 'confirm_password', FILTER_SANITIZE_STRING);
 $language = filter_input(INPUT_POST, 'language', FILTER_SANITIZE_STRING);
+$notes = filter_input(INPUT_POST, 'notes', FILTER_SANITIZE_STRING);
 
 ;
 
@@ -40,6 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 	if(!array_key_exists($language, $possible_languages)) {
 		$errors['language'] = true;
+	}
+	if(mb_strlen($notes) < 7 || mb_strlen($notes) > 150) {
+		$errors['notes'] = true;
 	}
 	
 }

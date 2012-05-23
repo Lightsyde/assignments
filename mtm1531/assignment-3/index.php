@@ -79,6 +79,15 @@ require_once 'includes/form-processor.php'
 					
 					</fieldset>
 				</div>
+				
+				<div class="formitem">
+					<label for="notes">Notes
+						<?php if(isset($errors['notes'])) : ?></label>
+								<strong class="error">must be between 7 and 150 characters long!!!</strong>
+							<?php endif; ?>
+					<textarea id="notes" name="notes"></textarea>
+					<p>must be between 7 and 150 characters long.</p>
+				</div>
 			</div>
 			<button type="submit">Send</button>
 		</form>
