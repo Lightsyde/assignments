@@ -88,8 +88,17 @@ require_once 'includes/form-processor.php'
 					<textarea id="notes" name="notes"></textarea>
 					<p>must be between 7 and 150 characters long.</p>
 				</div>
+				
+				<div class="formitem">
+					<input type="checkbox" id="terms" name="terms" value="1">
+					<label for="terms">Accept terms?
+						<?php if (isset($errors['terms'])) :?>
+							<strong class="error">You must comply or else!!</strong></label>
+						<?php endif; ?>
+					</label>
+				</div>
 			</div>
-			<button type="submit">Send</button>
+			<button type="submit">Send form</button>
 		</form>
 	
 	</body>

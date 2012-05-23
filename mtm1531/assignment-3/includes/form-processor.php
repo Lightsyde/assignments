@@ -17,6 +17,8 @@ $confirm_password = filter_input(INPUT_POST, 'confirm_password', FILTER_SANITIZE
 $language = filter_input(INPUT_POST, 'language', FILTER_SANITIZE_STRING);
 $notes = filter_input(INPUT_POST, 'notes', FILTER_SANITIZE_STRING);
 
+$say_thanks = false;
+
 ;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -44,6 +46,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 	if(mb_strlen($notes) < 7 || mb_strlen($notes) > 150) {
 		$errors['notes'] = true;
+	}
+	if (!isset($_POST['terms'])) {
+		$errors['terms'] = true;
+	}
+	if (empty($errors)) {
+		$say_thanks = true;
+		mail($email, 'Thanks for registering', 'Thanks','From: Titar Awua-Imande, <taimande@gmail.com>');
 	}
 	
 }
