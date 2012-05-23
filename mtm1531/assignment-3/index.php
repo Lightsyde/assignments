@@ -35,6 +35,16 @@ require_once 'includes/form-processor.php'
 					<input id="email" name="email" required value= <?php echo $email; ?>>
 				
 				<div>
+					<label for="username">Username:
+						<?php if(isset($errors['username'])) : ?></label>
+							<strong class="error">must be between 4 and 25 characters</strong>
+						<?php endif; ?>
+					<input id="username" name="username" required value <?php echo $username; ?>>
+					
+				</div>
+				
+				
+				<div>
 					
 				</div>
 			</div>

@@ -18,4 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$errors['email'] = true;
 	}
 	
+	if(mb_strlen($username) < 4 || mb_strlen($username) > 25) {
+		$errors['username'] = true;
+	}
+	
 }
