@@ -25,24 +25,45 @@ require_once 'includes/form-processor.php'
 				
 				
 				
-				<div>
 					
-				</div>
+				<div>
 					<label for="email">Email Address: 
 						<?php if(isset($errors['email'])): ?>
 							<strong class="error">is required!!!</strong></label>
 						<?php endif ?>	
-					<input id="email" name="email" required value= <?php echo $email; ?>>
+					<input id="email" name="email" required value= "<?php echo $email; ?>">
+				</div>
+				
+				
 				
 				<div>
 					<label for="username">Username:
 						<?php if(isset($errors['username'])) : ?></label>
 							<strong class="error">must be between 4 and 25 characters</strong>
 						<?php endif; ?>
-					<input id="username" name="username" required value <?php echo $username; ?>>
+					<input id="username" name="username" required value="<?php echo $username; ?>">
 					
 				</div>
 				
+				
+				<div>
+					<label for="password">Password: 
+						<?php if(isset($errors['password'])) :?></label>
+							<strong class="error">is required!!!</strong>
+						<?php endif; ?>
+					<input type="password" id="password" name="password" required value="<?php echo $password; ?>">
+					
+				</div>
+				
+				
+				
+				<div>
+					<label for="confirm_password">Confirm password:
+						<?php if(isset($errors['confirm_password'])) :?></label>
+							<strong class="error">your passwords do not match!!!</strong>
+						<?php endif; ?></label>
+					<input type="password" id="confirm_password" name="confirm_password" required value="<?php echo $confirm_password; ?>">
+				</div>
 				
 				<div>
 					
