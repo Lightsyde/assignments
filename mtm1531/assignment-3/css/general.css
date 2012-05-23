@@ -13,10 +13,27 @@ body {
 fieldset {
 	margin: 10px 0 7px 0;
 }
+
+#entireform {
+	width: 40em;
+	margin: 14px auto;
 	
-div {
-	margin: 7px;
+	background-color: #cddeb6;
+	border: 3px solid #aab897;
+	
+	
 }
+
+.formitem {
+	display: block;
+	margin: 21px;
+}
+
+.error {
+	color:#F33;
+}
+
+
 
 input:invalid {
 	color:#FF0000;

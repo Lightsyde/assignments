@@ -16,6 +16,9 @@ require_once 'includes/form-processor.php'
 		<form method="post" action="index.php">
 			<div id="entireform">
 				<div class="formitem">
+					<h1>Register with us!!!</h1>
+				</div>
+				<div class="formitem">
 					<label for="name">Name:
 						<?php if(isset($errors['name'])) : ?>
 							<strong class="error">is required!!!!</strong></label>
@@ -97,8 +100,12 @@ require_once 'includes/form-processor.php'
 						<?php endif; ?>
 					</label>
 				</div>
+				
+				<div class="formitem">
+					<button type="submit">Send form</button>
+				</div>
 			</div>
-			<button type="submit">Send form</button>
+			
 		</form>
 	
 	</body>
