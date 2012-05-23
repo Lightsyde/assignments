@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 	if (empty($errors)) {
 		$say_thanks = true;
-		mail($email, 'Thanks for registering', 'Thanks','From: Titar Awua-Imande, <taimande@gmail.com>');
+		mail($email, 'Thanks for registering', 'Thanks a ton!! You can now consider yourself an epic person for the rest of your life!!!','From: Titar Awua-Imande, <taimande@gmail.com>');
 	}
 	
 }
