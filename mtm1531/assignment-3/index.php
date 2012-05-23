@@ -14,8 +14,8 @@ require_once 'includes/form-processor.php'
 
 	<body>
 		<form method="post" action="index.php">
-			<div>
-				<div>
+			<div id="entireform">
+				<div class="formitem">
 					<label for="name">Name:
 						<?php if(isset($errors['name'])) : ?>
 							<strong class="error">is required!!!!</strong></label>
@@ -26,7 +26,7 @@ require_once 'includes/form-processor.php'
 				
 				
 					
-				<div>
+				<div class="formitem">
 					<label for="email">Email Address: 
 						<?php if(isset($errors['email'])): ?>
 							<strong class="error">is required!!!</strong></label>
@@ -36,7 +36,7 @@ require_once 'includes/form-processor.php'
 				
 				
 				
-				<div>
+				<div class="formitem">
 					<label for="username">Username:
 						<?php if(isset($errors['username'])) : ?></label>
 							<strong class="error">must be between 4 and 25 characters</strong>
@@ -46,9 +46,9 @@ require_once 'includes/form-processor.php'
 				</div>
 				
 				
-				<div>
+				<div class="formitem">
 					<label for="password">Password: 
-						<?php if(isset($errors['password'])) :?></label>
+						<?php if(isset($errors['password'])) : ?></label>
 							<strong class="error">is required!!!</strong>
 						<?php endif; ?>
 					<input type="password" id="password" name="password" required value="<?php echo $password; ?>">
@@ -57,16 +57,27 @@ require_once 'includes/form-processor.php'
 				
 				
 				
-				<div>
+				<div class="formitem">
 					<label for="confirm_password">Confirm password:
-						<?php if(isset($errors['confirm_password'])) :?></label>
+						<?php if(isset($errors['confirm_password'])) : ?></label>
 							<strong class="error">your passwords do not match!!!</strong>
 						<?php endif; ?></label>
 					<input type="password" id="confirm_password" name="confirm_password" required value="<?php echo $confirm_password; ?>">
 				</div>
 				
-				<div>
+				<div class="formitem">
+					<fieldset>
+						<legend>Preferred language:
+							<?php if(isset($errors['language'])) : ?></legend>
+								<strong class="error">Select your preferred language!!!</strong>
+							<?php endif; ?>
+							
+						<?php foreach($possible_languages as $key => $value) : ?>
+							<input type="radio" id="<?php echo $key; ?>" name="language" value="<?php echo $key; ?>">
+							<label for="<?php echo $key; ?>"><?php echo $value; ?></label>
+						 <?php endforeach ?>
 					
+					</fieldset>
 				</div>
 			</div>
 			<button type="submit">Send</button>
