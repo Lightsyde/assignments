@@ -29,4 +29,17 @@ $(document).ready(function() {
 		}
 	});
 	
+	$('#hide-show').on('click', function (ev) {
+		//$('.circ').hide().fadeOut([700]);
+		$(this).toggle(function() {
+			$('.circ').fadeOut(700);
+			
+		}, function () {
+		
+			$('.circ').fadeIn(700);
+		
+		})
+		
+	})
+	
 });// JavaScript Document
