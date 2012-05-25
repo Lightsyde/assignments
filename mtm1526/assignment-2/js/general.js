@@ -11,6 +11,7 @@
 
 var createTodo = document.getElementById('new-to-to');
 var addButton = document.getElementById('add-to-list');
+var grabLi = document.getElementsByTagName('li');
 
 
 
@@ -46,7 +47,7 @@ var doIT = function (elem, ev, func) {
 doIT(addButton, 'click', function () {
 	if(createTodo.value.length!=0){
 		liMake = document.createElement('li');
-		liMake.className = ('current');
+		
 		liMake.innerHTML = createTodo.value;
 
 		document.body.appendChild(liMake);
@@ -68,19 +69,13 @@ doIT(addButton, 'click', function () {
 })
 doIT(document.body, 'click', function (ev) {
 	if(ev.target.tagName.toLowerCase() = 'li') {
-		ev.c
+		addAndRemoveliCurrent();
 		
 	}
 	
 	
 });
 
-doIT(document.getElementsByTagName('li'), 'click', function(ev) {
-	
-	
-	
-	
-});
 
 
 
