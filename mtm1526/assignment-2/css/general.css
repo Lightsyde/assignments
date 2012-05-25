@@ -2,6 +2,11 @@
 /* CSS Document */
 
 body {
+	
+	background-color:#e8f0dd;
+}
+
+div {
 	width: 35em;
 	margin: 14px auto;
 	padding: 21px;

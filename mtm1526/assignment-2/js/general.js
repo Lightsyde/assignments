@@ -12,6 +12,7 @@
 var createTodo = document.getElementById('new-to-to');
 var addButton = document.getElementById('add-to-list');
 var grabLi = document.getElementsByTagName('li');
+var grabUl = document.getElementsByTagName('ul');
 
 
 
@@ -53,7 +54,10 @@ doIT(addButton, 'click', function () {
 		
 		liMake.innerHTML = createTodo.value;
 
-		document.body.appendChild(liMake);
+		//document.body.appendChild(liMake);
+		grabUl[0].appendChild(liMake);
+		
+		
 		
 		doIT(document.getElementById('new-to-to'), 'enter', function () {
 			
