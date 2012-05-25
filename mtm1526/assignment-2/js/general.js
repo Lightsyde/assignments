@@ -18,18 +18,26 @@ var grabLi = document.getElementsByTagName('li');
 var liMake;
 //console.log(createTodo, addButton, grabLi);
 
-var addAndRemoveliCurrent = function() {
+var addLiCurrent = function() {
 
+	
+	if (liMake.className.valueOf('current') != true){
+		liMake.className = 'current';
+		removeLiCurrent();
+	}
+	
+	
+}
+
+var removeLiCurrent = function() {
+	
+	
 	if (liMake.className.valueOf('current') == true) {
 		liMake.className = '';
-		
+		addLiCurrent();
 	}
-	else if (liMake.className.valueOf('current') != true){
-		liMake.className = 'current';
-		if(liMake.className.valueOf('current') == true) {
-			liMake.className = '';
-		}
-	}
+	
+	
 	
 	
 }
@@ -51,6 +59,7 @@ var doIT = function (elem, ev, func) {
 doIT(addButton, 'click', function () {
 	if(createTodo.value.length!=0){
 		liMake = document.createElement('li');
+		
 		
 		liMake.innerHTML = createTodo.value;
 
@@ -76,7 +85,7 @@ doIT(document.body, 'click', function (ev) {
 	if(ev.target.tagName.toLowerCase() == 'li') {
 		liMake = ev.target;
 		//liMake.className = 'current';
-		addAndRemoveliCurrent();
+		addLiCurrent();
 	
 	}
 	

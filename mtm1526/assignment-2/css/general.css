@@ -1,8 +1,24 @@
 @charset "utf-8";
 /* CSS Document */
 
-ul li {
-	color:#330099;
+body {
+	width: 40em;
+	margin: 14px auto;
+	padding: 14px;
+	
+	background-color: #cddeb6;
+	border: 3px solid #aab897;
+	
+}
+
+ul {
+	margin-left: -40px;
+	
+}
+
+li {
+	list-style-type:georgian;
+	
 }
 
 .current {
