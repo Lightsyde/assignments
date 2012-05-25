@@ -1,3 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
 
+div {
+	margin: 91px;
+	width: 224px;
+	height: 224px;
+	border-radius: 14em;
+	background-color:#3Fb;
+	border: 7px solid #000;
+	text-align:center;
+	line-height: 21px;
+}
+div h1 {
+	font-size: 8em;
+}
