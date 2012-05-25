@@ -20,27 +20,17 @@ var liMake;
 
 var addLiCurrent = function() {
 
-	
-	if (liMake.className.valueOf('current') != true){
+	if (liMake.className != 'current'){
 		liMake.className = 'current';
-		removeLiCurrent();
+		
 	}
-	
+	else {
+		liMake.className = '';
+	}
 	
 }
 
-var removeLiCurrent = function() {
-	
-	
-	if (liMake.className.valueOf('current') == true) {
-		liMake.className = '';
-		addLiCurrent();
-	}
-	
-	
-	
-	
-}
+
 
 var doIT = function (elem, ev, func) {
 	if (window.addEventListener) {
