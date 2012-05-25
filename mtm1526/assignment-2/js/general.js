@@ -16,6 +16,19 @@ var addButton = document.getElementById('add-to-list');
 
 var liMake;
 //console.log(createTodo, addButton);
+
+var addAndRemoveliCurrent = function() {
+	
+	if (liMake.className = 'current') {
+		liMake.className = '';
+	}
+	else {
+		liMake.className = 'current';
+	}
+	
+	
+}
+
 var doIT = function (elem, ev, func) {
 	if (window.addEventListener) {
 		elem.addEventListener(ev, func, false);
@@ -33,7 +46,7 @@ var doIT = function (elem, ev, func) {
 doIT(addButton, 'click', function () {
 	if(createTodo.value.length!=0){
 		liMake = document.createElement('li');
-		
+		liMake.className = ('current');
 		liMake.innerHTML = createTodo.value;
 
 		document.body.appendChild(liMake);
@@ -53,6 +66,21 @@ doIT(addButton, 'click', function () {
 	}
 	
 })
+doIT(document.body, 'click', function (ev) {
+	if(ev.target.tagName.toLowerCase() = 'li') {
+		ev.c
+		
+	}
+	
+	
+});
+
+doIT(document.getElementsByTagName('li'), 'click', function(ev) {
+	
+	
+	
+	
+});
 
 
 
