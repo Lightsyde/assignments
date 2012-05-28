@@ -1,0 +1,76 @@
+
+--------------------------------------------------
+Get all the information about a single movie in the database.
+
+SELECT movie_title, release_date, director
+FROM movies
+WHERE id = 1
+
+or
+
+
+SELECT * 
+FROM movies
+where id = 1
+
+or
+
+SELECT * 
+FROM movies
+where movie_title = 'The Avengers'
+*************************************
+
+------------------------------------------------
+Get the title and release date for the first three movies in alphabetical order
+
+SELECT movie_title, release_date 
+FROM movies
+WHERE id < 4
+ORDER BY movie_title ASC
+**************************************
+
+------------------------------------------------
+Get the title and director for the movies ordered by the release date, oldest first.
+
+SELECT movie_title, director
+FROM movies
+ORDER BY release_date ASC
+****************************************
+
+-----------------------------------------------
+
+Change the title and director of a single movie in the database.
+
+UPDATE movies 
+SET movie_title = 'The Epic Avengers',
+director = 'Lightsyde'
+WHERE id = 1
+**************************************
+
+-------------------------------------------------------------
+Create a new movie in the database.
+
+INSERT INTO movies
+(movie_title, release_date, director)
+VALUES
+('Men in Black III', '2012-05-25', 'Barry Sonnenfeld')
+****************************************
+
+----------------------------------------------------------
+Remove a single movie from the database.
+
+DELETE FROM
+movies
+WHERE id = 3
+**************************************
+
+
+----------------------------------------------
+Try out the LIKE keyword to get all the movies that have an ‘s’ in their title and order them by the director’s name reverse alphabetically.
+
+SELECT * FROM
+movies
+WHERE movie_title 
+LIKE 's%'
+ORDER BY director DESC
+***************************************
