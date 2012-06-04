@@ -6,7 +6,7 @@ $sql = $db->query('
 
 	SELECT id,movie_title,release_date,director
 	FROM movies
-	ORDER BY movie_title ASC
+	ORDER BY release_date DESC
 
 
 ');
