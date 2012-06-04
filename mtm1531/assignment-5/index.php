@@ -2,6 +2,17 @@
 
 require_once 'includes/database.php';
 
+$sql = $db->query('
+
+	SELECT id,movie_title,release_date,director
+	FROM movies
+	ORDER BY movie_title ASC
+
+
+');
+
+$results = $sql->fetchAll();
+
 ?><!DOCTYPE HTML>
 <html>
 	<head>
@@ -10,15 +21,15 @@ require_once 'includes/database.php';
 	</head>
 
 	<body>
-		<h2></h2>
+		<?php foreach($results as $movies): ?>
+		<h2><?php echo $movies['movie_title']; ?></h2>
 		<dl>
-			<dt>Movie Title</dt>
-			<dd></dd>
 			<dt>Release Date</dt>
-			<dd></dd>
+			<dd><?php echo $movies['release_date']; ?></dd>
 			<dt>Director</dt>
-			<dd></dd>
+			<dd><?php echo $movies['director']; ?></dd>
 			
 		</dl>
+		<?php endforeach; ?>
 	</body>
 </html>
