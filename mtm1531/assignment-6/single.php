@@ -33,5 +33,6 @@ $results = $sql->fetch();
 			
 		</dl>
 		<a href="delete.php?id=<?php echo $id; ?>">Delete</a>
+		<a href="editing.php?id=<?php echo $id; ?>">Edit</a>
 	</body>
 </html>
