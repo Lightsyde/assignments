@@ -59,6 +59,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$release_date = $results['release_date'];
 	$director = $results['director'];
 	
+	
+	
 }
 
 
@@ -79,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<strong class="error">is required</strong>
 					<?php endif; ?>
 				</label>
-				<input id="movie_title" name="movie_title" required value=<?php echo $movie_title; ?>>
+				<input id="movie_title" name="movie_title" required value="<?php echo $movie_title; ?>">
 			</div>
 			
 			<div>	
@@ -88,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<strong class="error">is required</strong>
 					<?php endif; ?>
 				</label>
-				<input type="time"  id="release_date" name="release_date" required value=<?php echo $release_date; ?>>
+				<input type="time"  id="release_date" name="release_date" required value="<?php echo $release_date; ?>">
 			</div>
 			
 			<div>	
@@ -97,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<strong class="error">is required</strong>
 					<?php endif; ?>
 				</label>
-				<input id="director" name="director" required value=<?php echo $director; ?>>
+				<input id="director" name="director" required value="<?php echo $director; ?>">
 			</div>
 			
 			
