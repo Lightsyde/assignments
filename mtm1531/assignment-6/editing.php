@@ -2,6 +2,7 @@
 require_once 'includes/database.php';
 $errors = array();
 
+$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 $movie_title = filter_input(INPUT_POST, 'movie_title', FILTER_SANITIZE_STRING);
 $release_date = filter_input(INPUT_POST,'release_date', FILTER_SANITIZE_STRING);
 $director = filter_input(INPUT_POST, 'director', FILTER_SANITIZE_STRING);
@@ -26,13 +27,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		
 		
 		$sql = $db->prepare('
-			UPDATE movies (movie_title, release_date, director)
+			UPDATE movies 
 			SET movie_title = :movie_title
 			, release_date = :release_date
 			, director = :director
 			WHERE id = :id
 		
 		');
+		$sql->bindValue(':id', $id, PDO::PARAM_INT);
 		$sql->bindValue(':movie_title', $movie_title, PDO::PARAM_STR);
 		$sql->bindValue(':release_date', $release_date, PDO::PARAM_STR);
 		$sql->bindValue(':director', $director, PDO::PARAM_STR);
@@ -42,6 +44,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		exit;
 	}
 	
+} else {
+	$sql = $db->prepare('
+	SELECT movie_title, release_date, director
+	FROM movies
+	WHERE id = :id
+	
+	');
+	$sql->bindValue(':id', $id, PDO::PARAM_INT);
+	$sql->execute();
+	$results = $sql->fetch();
+	
+	$movie_title = $results['movie_title'];
+	$release_date = $results['release_date'];
+	$director = $results['director'];
+	
 }
 
 
@@ -50,19 +67,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Add New Movie</title>
+		<title>Edit a movie</title>
 	</head>
 
 	<body>
-		<h1>Add a new movie</h1>
-		<form method="post" method="adding.php">
+		<h1>Edit Movie</h1>
+		<form method="post" method="edit.php?id=<?php echo $id; ?>">
 			<div>
 				<label for="movie_title">Movie Title
 					<?php if (isset($errors['movie_title'])) : ?>
 						<strong class="error">is required</strong>
 					<?php endif; ?>
 				</label>
-				<input id="movie_title" name="movie_title" required>
+				<input id="movie_title" name="movie_title" required value=<?php echo $movie_title; ?>>
 			</div>
 			
 			<div>	
@@ -71,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<strong class="error">is required</strong>
 					<?php endif; ?>
 				</label>
-				<input type="time"  id="release_date" name="release_date" required>
+				<input type="time"  id="release_date" name="release_date" required value=<?php echo $release_date; ?>>
 			</div>
 			
 			<div>	
@@ -80,11 +97,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<strong class="error">is required</strong>
 					<?php endif; ?>
 				</label>
-				<input id="director" name="director" required>
+				<input id="director" name="director" required value=<?php echo $director; ?>>
 			</div>
 			
 			
-			<button type="submit">Add</button>
+			<button type="submit">Save</button>
 		
 		
 	
