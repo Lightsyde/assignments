@@ -1,11 +1,15 @@
 $(document).ready(function () {
 	
-	$.get('auto-load.html', function (data) {
-		$('body').prepend(data);
+	$.get('a.html', function (data) {
+		$('#fillme').prepend(data);
 	});
 	
-	$('#gethtml').on('click', function () {
-		$('#fillme').load('load-me.html');
+	$('#getahtml').on('click', function () {
+		$('#fillme').load('a.html');
+	});
+	
+	$('#getbhtml').one('click', function() {
+		$('#fillme').load('b.html');
 	});
 	
 	$('#sendme').on('change', function () {
