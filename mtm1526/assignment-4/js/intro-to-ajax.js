@@ -12,10 +12,6 @@ $(document).ready(function () {
 		$('#fillme').load('b.html');
 	});
 	
-	$('#sendme').on('change', function () {
-		$.post('save.php', {
-			sendme : $('#sendme').val()
-		});
-	});
+	
 	
 });
