@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JS - Form Validation</title>
+	<link href="css/general.css" rel="stylesheet">
+</head>
+<body>
+	<form>
+		<div>
+			<label for="username">Username</label>
+			<input id="username" name="username" required>
+			<strong class="user-available" data-status="unchecked">Available</strong>
+		</div>
+		<div>
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" required>
+			<strong>Password requirements</strong>
+			<ul class="pass-reqs">
+				<li class="pass-length">At least 6 characters</li>
+				<li class="pass-lower">1 lowercase letter</li>
+				<li class="pass-upper">1 uppercase letter</li>
+				<li class="pass-num">1 number</li>
+				<li class="pass-symbol">1 symbol</li>
+			</ul>
+		</div>
+
+		<button type="submit">Submit</button>
+
+	</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="js/form-validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+.todos > li[data-status="1"] {
+	color: #ccc;
+	text-decoration: line-through;
+}
