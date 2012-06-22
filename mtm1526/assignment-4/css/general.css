@@ -1,6 +1,29 @@
 @charset "utf-8";
 /* CSS Document */
 
+html {
+	background-color: #8a9c78;
+}
+
+body {
+	width: 49em;
+	margin: 3em auto;
+	
+}
+
+#total {
+	background-color:#a9bf93;
+	padding: 3em 3em 3em 3em;
+	border:2px solid #030;
+	border-radius: 7px;
+}
+
+#fillme  {
+	padding: 4px;
+	background-color: #cee0bc;
+}
+
 .buttons {
 	display: inline;
 }
+
