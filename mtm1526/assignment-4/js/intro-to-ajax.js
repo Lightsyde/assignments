@@ -8,10 +8,16 @@ $(document).ready(function () {
 		$('#fillme').load('a.html');
 	});
 	
-	$('#getbhtml').one('click', function() {
+	$('#getbhtml').on('click', function() {
 		$('#fillme').load('b.html');
 	});
 	
+	$('#getchtml').on('click', function() {
+		$('#fillme').load('c.html');
+	});
 	
+	$('#getdhtml').on('click', function() {
+		$('#fillme').load('d.html');
+	});
 	
 });
