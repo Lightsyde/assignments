@@ -143,7 +143,7 @@ $(document).ready(function() {
 			userAvailable.attr('data-status') == 'unchecked'
 			|| userAvailable.attr('data-status') == 'unavailable'
 			|| passwordReqs < 5
-			|| citReqs != 2
+			|| cityReqs != 2
 		) {
 			ev.preventDefault();
 		}
