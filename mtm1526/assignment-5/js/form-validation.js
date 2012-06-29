@@ -78,6 +78,11 @@ $(document).ready(function() {
 			$('.city-lowerupper').attr('data-state', 'achieved');
 		}
 		
+		if (!city.match(/\d/) && !city.match(/[^a-zA-A0-9]/)) {
+			cityReqs++;
+			$('.city-num-symbol').attr('data-state', 'achieved');
+		}
+		
    });
    
    
@@ -120,7 +125,7 @@ $(document).ready(function() {
 			userAvailable.attr('data-status') == 'unchecked'
 			|| userAvailable.attr('data-status') == 'unavailable'
 			|| passwordReqs < 5
-			|| citReqs < 1
+			|| citReqs != 2
 		) {
 			ev.preventDefault();
 		}
