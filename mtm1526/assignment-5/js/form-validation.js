@@ -2,7 +2,7 @@
 $(document).ready(function() {
    var userAvailable = $('.user-available');
    var passwordReqs = 0;
-   var emailAvailable = $('.user-available');
+   var emailAvailable = $('.email-available');
    
    $('#username').on('change', function (ev) {
 	  var username = $(this).val(); 
@@ -40,18 +40,18 @@ $(document).ready(function() {
 	  
 	  emailAvailable.attr('data-status', 'unchecked');
 	   
-	   if (username.length >= 3 && username.length <= 25) {
-		   var ajax = $.post('check-username.php', {
-			   'username' : username
+	   if (email.length >= 3 && email.length <= 25) {
+		   var ajax = $.post('check-email.php', {
+			   'email' : email
 		   });
 		   
 		   ajax.done(function (data) {
 			  if (data == 'available') {
-				  userAvailable
+				  emailAvailable
 				   .attr('data-status', 'available')
 					.html('Available')
 			  }else {
-				   userAvailable
+				   emailAvailable
 				   .attr('data-status', 'unavailable')
 					.html('Unavailable')
 					
@@ -59,7 +59,7 @@ $(document).ready(function() {
 				  
 		   });
 	   }else {
-		   userAvailable
+		   emailAvailable
 		   		.attr('data-status', 'unavailable')
 				.html('Unavailable')
 		   ;
