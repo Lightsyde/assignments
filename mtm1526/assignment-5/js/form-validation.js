@@ -2,7 +2,7 @@
 $(document).ready(function() {
    var userAvailable = $('.user-available');
    var passwordReqs = 0;
-   var emailReqs = 0;
+   var emailAvailable = $('.user-available');
    
    $('#username').on('change', function (ev) {
 	  var username = $(this).val(); 
@@ -35,6 +35,38 @@ $(document).ready(function() {
 	   }
    });
    
+   $('#email').on('change', function (ev) {
+	  var email = $(this).val(); 
+	  
+	  emailAvailable.attr('data-status', 'unchecked');
+	   
+	   if (username.length >= 3 && username.length <= 25) {
+		   var ajax = $.post('check-username.php', {
+			   'username' : username
+		   });
+		   
+		   ajax.done(function (data) {
+			  if (data == 'available') {
+				  userAvailable
+				   .attr('data-status', 'available')
+					.html('Available')
+			  }else {
+				   userAvailable
+				   .attr('data-status', 'unavailable')
+					.html('Unavailable')
+					
+			  }
+				  
+		   });
+	   }else {
+		   userAvailable
+		   		.attr('data-status', 'unavailable')
+				.html('Unavailable')
+		   ;
+	   }
+   });
+   
+   
    $('#password').on('keyup', function(ev) {
 	 	var password = $(this).val();
 		
@@ -66,18 +98,7 @@ $(document).ready(function() {
 		}
    });
    
-   $('#email').on('keyup', function(ev) {
-	 	var email = $(this).val();
-		
-		passwordReqs = 0;
-		
-		if (password.length > 5) {
-			passwordReqs++;
-			$('.pass-length').attr('data-state', 'achieved');  
-		}
-		
-		
-   });
+   
    
    
    $('form').on('submit', function (ev) {

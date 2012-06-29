@@ -24,6 +24,40 @@
 }
 
 
+
+/*   
+email
+*/
+
+.email-available:before {
+	content:"✔";
+}
+
+.email-available[data-status="unchecked"] {
+	display:none;
+}
+
+.email-available[data-status="available"] {
+	color: #090;
+}
+
+.email-available[data-status="unavailable"] {
+	color: #f33;
+}
+
+.email-available[data-status="unavailable"]:before {
+	content:"✖";
+}
+
+
+/*   
+email end
+*/
+
+
+
+
+
 .pass-reqs {
 	list-style-type: none;
 	

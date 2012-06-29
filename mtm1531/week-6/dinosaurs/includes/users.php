@@ -19,11 +19,12 @@ function get_hashed_password($password) {
 
 function user_create ($db, $username, $password) {
 	$sql = $db->prepare('
-		INSERT INTO users (username, password)
-		VALUES	(:username, :password)
+		INSERT INTO users (username, password, email)
+		VALUES	(:username, :password, :email)
 	');
 	$sql->bindValue(':username', $username, PDO::PARAM_STR);
 	$sql->bindValue(':password', get_hashed_password($password), PDO::PARAM_STR);
+	$sql->bindValue(':email', $email, PDO::PARAM_STR);
 	$sql->execute();
 	
 	return $db->lastInsertId();
@@ -47,7 +48,7 @@ function user_is_signed_in () {
 
 function user_get ($db, $username, $password) {
 	$sql = $db->prepare ('
-		SELECT id, username, password
+		SELECT id, username, password, email
 		FROM users
 		WHERE username = :username
 		LIMIT 1
