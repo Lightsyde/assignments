@@ -124,12 +124,12 @@ $(document).ready(function() {
 		
 		if (countries.val() == "canada") {
 		
-			$('#filladdress').load('data-state', 'achieved');  
+			$('#filladdress').load('countries.php', '#addcanada');  
 		}
 		
 		if (countries.val() == "us") {
 			
-			$('#filladdress').load('data-state', 'achieved');
+			$('#filladdress').load('countries.php', '#addus');
 		}
    });
    
