@@ -124,12 +124,14 @@ $(document).ready(function() {
 		
 		if (countries.val() == "canada") {
 		
-			$('#filladdress').load('countries.php', '#addcanada');  
+			$('#filladdress').load('countries.php #addcanada');
+			$('#addus').toggleClass('hidden');  
 		}
 		
 		if (countries.val() == "us") {
 			
-			$('#filladdress').load('countries.php', '#addus');
+			$('#filladdress').load('countries.php #addus');
+			$('#addcanada').toggleClass('hidden');
 		}
    });
    
