@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+	background-color: #f7f7f7;
+}
+
+body {
+	width: 27em;
+	margin: 3em auto;
+	
+}
+
+
+
+#total {
+	background-color:#a9bf93;
+	padding: 3em 3em 3em 3em;
+	border:2px solid #030;
+	border-radius: 7px;
+	
+}
+
+#fillme  {
+	padding: 14px;
+	
+	background-color: #cee0bc;
+}
+#all-buttons {
+	background-color: #cee0bc;
+	margin-right: -7px;
+}
+.buttons {
+	display: inline;
+	padding: 0;
+	margin: 0;
+	margin-left: -7px;
+	
+	
+}
+	
+

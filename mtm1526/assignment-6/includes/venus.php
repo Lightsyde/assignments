@@ -1,0 +1,3 @@
+<h2>Venus</h2>
+
+<p>Venus (0.7 AU from the Sun) is close in size to Earth (0.815 Earth masses), and, like Earth, has a thick silicate mantle around an iron core, a substantial atmosphere and evidence of internal geological activity. However, it is much drier than Earth and its atmosphere is ninety times as dense. Venus has no natural satellites. It is the hottest planet, with surface temperatures over 400 °C, most likely due to the amount of greenhouse gases in the atmosphere. No definitive evidence of current geological activity has been detected on Venus, but it has no magnetic field that would prevent depletion of its substantial atmosphere, which suggests that its atmosphere is regularly replenished by volcanic eruptions.</p>
