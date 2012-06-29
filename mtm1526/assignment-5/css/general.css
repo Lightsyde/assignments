@@ -73,3 +73,23 @@ email end
 	color: #090;
 	content:"✔"; 
 }
+
+/*
+city 
+*/
+
+.city-reqs {
+	list-style-type: none;
+	
+}
+
+.city-reqs li:before {
+	color: #f33;
+	font-size: 1.125em;
+	content: "✖";
+}
+
+.city-reqs li[data-state="achieved"]:before {
+	color: #090;
+	content:"✔"; 
+}
