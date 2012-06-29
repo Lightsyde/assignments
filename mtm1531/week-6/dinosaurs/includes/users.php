@@ -17,7 +17,7 @@ function get_hashed_password($password) {
 }
 
 
-function user_create ($db, $username, $password) {
+function user_create ($db, $username, $password, $email) {
 	$sql = $db->prepare('
 		INSERT INTO users (username, password, email)
 		VALUES	(:username, :password, :email)
