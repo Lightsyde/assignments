@@ -117,6 +117,22 @@ $(document).ready(function() {
 		}
    });
    
+   $('.countries').on('click', function(ev) {
+	 	var countries = $(this);
+		
+		
+		
+		if (countries.val() == "canada") {
+		
+			$('#filladdress').load('data-state', 'achieved');  
+		}
+		
+		if (countries.val() == "us") {
+			
+			$('#filladdress').load('data-state', 'achieved');
+		}
+   });
+   
    
    
    
