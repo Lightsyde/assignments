@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	width: 70%;
+	margin: 3em auto;
+	
+	background-color:#999;
+}
+
+
+label {
+	display: block;
+	margin: 5px;
+}
+
+.error {
+	color:#F33;
+}
+
