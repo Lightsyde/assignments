@@ -1,0 +1,36 @@
+# Bolt Online Picture Security
+
+Bolt Online Picture Security is a small application that allows you to increase the security of any picture you place online.
+
+
+### Features
+- (Primary)
+- Accepts pictures and groups them manually or automatically
+- Prevents the copy/paste/save image from showing up on the pictures according to options selected
+- Allows changing of security level of pictures.
+- Displays pictures as a slideshow or thumbnail grid
+
+- (Secondary - If primary objectives have been completed) 
+- Remains unobtrusively in the background or frames pictures beautifully according to options selected.
+- Record and send a warning if the Bolt Online Picture Securities methods have somehow been circumvented.
+- Establish an updatable database record of images for people who have created an account. Regularly checks and updates the security log of their images.
+- Create a method of ensuring that Bolt Online Picture Security locks a persons ID to a particular copy to prevent pirating.
+- Create a method of circumventing screenshot of images. 
+
+
+### Learning goals
+- Learn more about jQuery and javascript
+- Understanding how to deploy an application online that can be used by multiple people online.
+- Understand how to ensure that an application I create cannot be copied and pirated with impunity.
+
+
+### Technologies and Techniques
+- jQuery and Javascript.
+
+### Similar Apps
+
+
+### User Research
+- Bolt Online Picture Security is primarily targeted at artist who wish to create and display stories and illustrations online but are worried about people 
+who steal and claim other artwork as theirs, as well as being able to ensure the marketability of their work by making sure it cant be easily duplicated 
+with impunity.

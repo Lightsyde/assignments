@@ -1,0 +1,40 @@
+Color related applications  - 
+*****************
+
+01 [Color Wheel] (http://www.allprofitallfree.com/color-wheel2.html)
+
+02 [Hex Color Code Chart & Generator] (http://www.2createawebsite.com/build/hex-colors.html)
+
+03 [Color Picker] (http://www.colorpicker.com/)
+
+
+04 [Kuler]  (http://kuler.adobe.com/#create/fromacolor)
+
+
+----------********--------------------
+
+
+
+
+General Widget application
+**********************
+01 [Hex Color Code Generator, Infotainment] (http://e-infotainment.com/applications/color-code-generator/)
+
+02 [ilovecolors](http://www.ilovecolors.com.ar/how-to-add-a-color-picker-to-your-wordpress-plugin-or-theme/)
+
+03-rank 1 [ColorPicker] (http://wiki.jqueryui.com/w/page/12137750/ColorPicker)
+
+http://www.roseindia.net/software-tutorials/detail/20785
+
+-----------------------
+
+
+Bullseye
+********************
+http://bgrins.github.com/TinyColor/
+
+https://github.com/harthur/color
+
+https://github.com/sgarza/Chameleon
+
+http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/
