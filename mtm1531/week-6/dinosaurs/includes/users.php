@@ -15,7 +15,17 @@ function get_hashed_password($password) {
 	return crypt($password, $salt);
 	
 }
-
+/**
+ * Creates a new user in the database
+ 	
+ *@param datatype $var_name Description
+ 
+ *@param PDOConnection $db The open connection to the database
+ *@param string $username The username for the new user
+ *@param string $password The user's password in clear text
+ 
+ *@return integer The new user's ID
+*/
 
 function user_create ($db, $username, $password, $email) {
 	$sql = $db->prepare('
@@ -68,6 +78,9 @@ function password_match ($pass_clear_text, $pass_hashed) {
 	return crypt($pass_clear_text, $pass_hashed) == $pass_hashed;
 }
 
+/**
+ *@return void
+*/
 function user_sign_in ($user_id) {
 	session_regenerate_id();
 	$_SESSION['user-id'] = $user_id;
